@@ -49,7 +49,6 @@ newGameButton.addEventListener('click', function() {
   newGameButton.style.display = 'none';
   hitButton.style.display = 'inline';
   stayButton.style.display = 'inline';
-
   showStatus();
 });
 
@@ -68,18 +67,18 @@ stayButton.addEventListener('click', function() {
 });
 
 function createDeck() {
-    let deck = []; // creates empty deck
-    // Loop to create the deck
-    for (let suitIndex = 0; suitIndex < suits.length; suitIndex++) {
-        for (let valueIndex = 0; valueIndex < values.length; valueIndex ++) {
-            let card = {
-                suit: suits[suitIndex],
-                value: values[valueIndex]
-            };
-            deck.push( card );
-        }
-    }
-    return deck;
+  let deck = []; // creates empty deck
+  // Loop to create the deck
+  for (let suitIndex = 0; suitIndex < suits.length; suitIndex++) {
+      for (let valueIndex = 0; valueIndex < values.length; valueIndex ++) {
+          let card = {
+              suit: suits[suitIndex],
+              value: values[valueIndex]
+          };
+          deck.push( card );
+      }
+  }
+  return deck;
 }
 
 // Shuffle the deck of cards so it is not always in the same order from createDeck
